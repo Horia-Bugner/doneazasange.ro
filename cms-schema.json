@@ -1,0 +1,12 @@
+{
+  "locales": ["ro", "hu", "en"],
+  "default_locale": "ro",
+  "collections": {
+    "donation_centres": ["centre_name", "slug", "county", "city", "address", "latitude", "longitude", "phone", "email", "website", "donor_hours", "active", "map_display_name", "search_aliases", "mobile_drive_available", "mobile_drive_minimum_people", "mobile_drive_space_requirements", "mobile_drive_other_requirements", "mobile_drive_whatsapp", "mobile_drive_email", "last_verified", "verification_status", "internal_source_note"],
+    "faq": ["question", "answer", "category", "keywords", "display_order", "related_page", "locale", "published"],
+    "gallery_images": ["image", "alt", "caption", "period", "album", "orientation", "timeline_eligible", "is_milestone", "near_duplicate_group", "display_order", "locale"],
+    "projects": ["title", "slug", "summary", "body", "status", "hero_image", "external_url", "milestones", "documents", "locale", "published"],
+    "site_settings": ["contact_address", "contact_phone", "contact_email", "social_links", "donor_guide_pdf", "analytics_id", "cookie_policy", "privacy_policy"]
+  },
+  "analytics_events": ["centre_search", "centre_marker_open", "centre_detail_open", "centre_navigation_click", "use_my_location", "faq_search", "faq_no_results", "language_change"]
+}

@@ -1,0 +1,7 @@
+faq-preview-*.html
+FAQ-LATEST.html
+*.inspect.ndjson
+*.bak
+*.url
+Thumbs.db
+.DS_Store

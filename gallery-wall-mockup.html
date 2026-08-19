@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Mockup — Perete fotografic FDBS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+  <script src="image-pools.js?v=1787005371"></script>
+  <style>
+    :root{--red:#b51f35;--ink:#211b1d;--muted:#71676a;--paper:#f7f3ee;--line:#ddd3cb}
+    *{box-sizing:border-box}body{margin:0;color:var(--ink);background:#fff;font-family:"DM Sans",sans-serif}
+    .topbar{height:82px;padding:0 clamp(20px,4vw,64px);display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #eee8e3;background:#fff;position:sticky;top:0;z-index:20}
+    .brand{display:flex;align-items:center;gap:12px;color:var(--ink);text-decoration:none}.brand img{width:50px;height:50px;border-radius:50%;object-fit:contain}.brand b{display:block;font-size:18px}.brand small{display:block;color:var(--muted);line-height:1.25}
+    .back{color:var(--red);font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;text-decoration:none}
+    .intro{padding:clamp(58px,8vw,110px) clamp(20px,6vw,96px) 46px;background:var(--paper);display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);gap:40px;align-items:end}
+    .eyebrow{color:var(--red);font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}.intro h1{font-family:"Newsreader",serif;font-size:clamp(48px,7vw,92px);font-weight:500;line-height:.94;margin:16px 0 0;max-width:920px}.intro p{font-size:18px;line-height:1.6;color:var(--muted);margin:0 0 7px}
+    .controls{padding:28px clamp(20px,6vw,96px);display:flex;align-items:center;justify-content:space-between;gap:24px;border-bottom:1px solid var(--line);background:#fff;position:sticky;top:82px;z-index:15}
+    .filters{display:flex;gap:9px;flex-wrap:wrap}.filter{border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 15px;font:600 13px "DM Sans";cursor:pointer}.filter.active,.filter:hover{background:var(--red);border-color:var(--red);color:#fff}.count{color:var(--muted);font-size:13px;white-space:nowrap}
+    .wall{padding:28px clamp(14px,3vw,44px) 70px;columns:4 260px;column-gap:12px;background:#fff}
+    .photo{position:relative;display:block;width:100%;padding:0;border:0;margin:0 0 12px;break-inside:avoid;overflow:hidden;background:#e9e2dc;cursor:zoom-in;text-align:left}.photo img{display:block;width:100%;height:auto;transition:transform .45s ease,filter .45s ease}.photo:hover img,.photo:focus img{transform:scale(1.025);filter:brightness(.72)}
+    .caption{position:absolute;inset:auto 0 0;padding:44px 18px 16px;color:#fff;background:linear-gradient(transparent,rgba(20,10,12,.86));opacity:0;transform:translateY(8px);transition:.25s}.photo:hover .caption,.photo:focus .caption{opacity:1;transform:none}.caption b{display:block;font-size:14px}.caption span{display:block;margin-top:4px;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#f2ced4}
+    .empty{padding:70px 20px;text-align:center;color:var(--muted);column-span:all}
+    dialog{border:0;padding:0;background:#141011;max-width:min(1120px,94vw);max-height:92vh;box-shadow:0 30px 90px #0008}dialog::backdrop{background:#12090bd9}.viewer{position:relative;display:grid;place-items:center}.viewer img{display:block;max-width:92vw;max-height:86vh}.close{position:absolute;right:12px;top:12px;width:42px;height:42px;border:0;border-radius:50%;background:#fff;color:#241b1d;font-size:25px;cursor:pointer}.viewer-info{position:absolute;left:0;right:0;bottom:0;padding:50px 22px 18px;color:#fff;background:linear-gradient(transparent,#140b0dd9)}
+    .note{margin:0;padding:18px clamp(20px,6vw,96px);background:#211b1d;color:#e9dfe1;font-size:12px;text-align:center}
+    @media(max-width:760px){.topbar{height:70px}.brand small{display:none}.controls{top:70px;align-items:flex-start;flex-direction:column}.intro{grid-template-columns:1fr}.wall{columns:2 150px;padding-inline:8px;column-gap:8px}.photo{margin-bottom:8px}.caption{opacity:1;transform:none;padding:34px 12px 10px}.intro h1{font-size:50px}}
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/galerie/"><img src="assets/logo-fdbs-oficial.jpg" alt="Logo FDBS"><span><b>FDBS</b><small>Fundația Donatorilor<br>Benevoli de Sânge</small></span></a>
+    <a class="back" href="/galerie/">← Galeria actuală</a>
+  </header>
+  <main>
+    <section class="intro">
+      <div><span class="eyebrow">Arhiva fotografică FDBS</span><h1>Oameni, gesturi și momente.</h1></div>
+      <p>Un perete fotografic continuu, construit din imaginile deja încărcate. Cronologia rămâne disponibilă prin filtre, dar fotografiile ocupă centrul paginii.</p>
+    </section>
+    <section class="controls" aria-label="Filtre galerie">
+      <div class="filters" id="filters"></div><span class="count" id="count"></span>
+    </section>
+    <section class="wall" id="wall" aria-live="polite"></section>
+  </main>
+  <p class="note">Mockup de design — pagina publică a galeriei nu a fost modificată.</p>
+  <dialog id="viewer"><div class="viewer"><button class="close" aria-label="Închide">×</button><img alt=""><div class="viewer-info"></div></div></dialog>
+  <script>
+    const periods=window.FDBS_IMAGE_POOLS?.gallery||{}, all=Object.entries(periods).flatMap(([period,items])=>(items||[]).filter(x=>x.active!==false).map((item,index)=>({...item,period,index}))), filters=document.querySelector('#filters'),wall=document.querySelector('#wall'),count=document.querySelector('#count'),viewer=document.querySelector('#viewer');
+    const clean=s=>s.replace(/\d+$/,'').replace(/[-_]+/g,' ').replace(/^\s+|\s+$/g,'').replace(/\b\w/g,c=>c.toUpperCase());
+    const names={'conferinta de presa cts bucuresti':'Conferință de presă la CTS București','expozitie desene elevi tonitza':'Expoziția elevilor de la Liceul Tonitza','masa rotunda medici 2004':'Masă rotundă cu medici','carticica fotbal donare':'Fotbal și donare de sânge','carticica micii fotbalisti marii donatori':'Micii fotbaliști, marii donatori','prezentare liceu':'Prezentare pentru elevi','seminar profesori 2007':'Seminar pentru profesori','tabara donatori muntele rosu 2005':'Tabăra donatorilor, Muntele Roșu'};
+    function label(item){const key=item.alt.replace(/\d+$/,'').trim();return names[key]||clean(item.alt)}
+    function render(period='Toate'){const items=period==='Toate'?all:all.filter(x=>x.period===period);count.textContent=`${items.length} fotografii`;wall.innerHTML=items.length?items.map((x,i)=>`<button class="photo" data-src="${x.src}" data-label="${label(x)}" data-period="${x.period}" aria-label="Mărește: ${label(x)}"><img src="${x.src}" alt="${label(x)}" loading="${i<8?'eager':'lazy'}"><span class="caption"><b>${label(x)}</b><span>${x.period}</span></span></button>`).join(''):'<p class="empty">Nu sunt încă fotografii în această perioadă.</p>';wall.querySelectorAll('.photo').forEach(button=>button.onclick=()=>{viewer.querySelector('img').src=button.dataset.src;viewer.querySelector('img').alt=button.dataset.label;viewer.querySelector('.viewer-info').innerHTML=`<b>${button.dataset.label}</b><br><small>${button.dataset.period}</small>`;viewer.showModal()})}
+    ['Toate',...Object.keys(periods).filter(p=>periods[p]?.length)].forEach((period,i)=>{const button=document.createElement('button');button.className=`filter${i===0?' active':''}`;button.textContent=period;button.onclick=()=>{document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));button.classList.add('active');render(period)};filters.append(button)});
+    viewer.querySelector('.close').onclick=()=>viewer.close();viewer.onclick=e=>{if(e.target===viewer)viewer.close()};render();
+  </script>
+</body>
+</html>

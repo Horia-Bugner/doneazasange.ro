@@ -29,3 +29,7 @@
 
 /* Keep national-map popovers fully visible at narrow east/west edges. */
 .map .map-popover{max-width:calc(100% - 24px)}
+
+/* Softer, lighter typography for the national centre directory intro. */
+.centres-page-hero h1{color:#43383b}
+.centres-page-hero p{color:#776d70}

@@ -34,6 +34,7 @@
 .centres-page-hero h1{color:#43383b}
 .centres-page-hero p{color:#776d70}
 .faq-inline-link{color:var(--red);font-weight:700;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}.faq-inline-link:hover,.faq-inline-link:focus{color:var(--red-dark)}
+.faq-legal-source{margin-top:20px;padding-top:12px;border-top:1px solid var(--line);color:var(--muted);font-size:12px;font-weight:600;text-align:right}
 
 /* Official legislation links */
 .legislation-list{display:grid;gap:18px;max-width:960px}.legislation-card{border:1px solid var(--line);border-left:4px solid var(--red);padding:30px;background:#fff}.legislation-card h2{font-family:'Newsreader',serif;font-size:clamp(28px,4vw,42px);margin:10px 0 12px}.legislation-card p{color:var(--muted);line-height:1.7;max-width:760px;margin:0 0 24px}.legislation-source{color:var(--muted);font-size:13px;margin:24px 0 0}@media(max-width:760px){.legislation-card{padding:24px 20px}.legislation-card .button{width:100%;text-align:center}}

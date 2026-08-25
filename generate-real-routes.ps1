@@ -14,6 +14,9 @@ $routeMap = [ordered]@{
   '#/cum-donez' = '/cum-donez/'
   '#/centre' = '/centre/'
   '#/faq' = '/intrebari-frecvente/'
+  '#/ghidul-donatorului' = '/ghidul-donatorului/'
+  '#/legislatie' = '/legislatie/'
+  '#/articole' = '/articole/'
   '#/acum' = '/proiecte-actuale/'
   '#/criterii' = '/criterii-eligibilitate/'
   '#/donorium' = '/donorium/'
@@ -42,6 +45,9 @@ $pages = @(
   @{ Url='/cum-donez/'; Title='Cum donez? — FDBS'; Description='Pregătirea și etapele donării de sânge.' },
   @{ Url='/centre/'; Title='Unde pot dona sânge? — FDBS'; Description='Harta centrelor de transfuzie și a punctelor de colectă din România.' },
   @{ Url='/intrebari-frecvente/'; Title='Întrebări frecvente despre donarea de sânge — FDBS'; Description='Răspunsuri pentru donatori despre eligibilitate, pregătire, donare și beneficii.' },
+  @{ Url='/ghidul-donatorului/'; Title='Ghidul Donatorului — FDBS'; Description='Informații esențiale pentru pregătirea și etapele donării de sânge.' },
+  @{ Url='/legislatie/'; Title='Legislație — FDBS'; Description='Acte normative relevante pentru donarea de sânge și activitatea de transfuzie sanguină din România.' },
+  @{ Url='/articole/'; Title='Articole — FDBS'; Description='Informații și explicații despre donarea de sânge și activitatea FDBS.' },
   @{ Url='/proiecte-actuale/'; Title='Proiecte actuale — FDBS'; Description='Proiectele actuale ale Fundației Donatorilor Benevoli de Sânge.' },
   @{ Url='/criterii-eligibilitate/'; Title='Actualizarea criteriilor de eligibilitate — FDBS'; Description='Proiectul FDBS pentru criterii de eligibilitate bazate pe dovezi actuale.' },
   @{ Url='/donorium/'; Title='Donorium — FDBS'; Description='Platforma Donorium și comunitatea donatorilor de sânge.' },

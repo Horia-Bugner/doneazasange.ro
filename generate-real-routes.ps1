@@ -23,6 +23,7 @@ $routeMap = [ordered]@{
   '#/galerie' = '/galerie/'
   '#/istoric' = '/despre-noi/'
   '#/implica-te' = '/implica-te/'
+  '#/contact' = '/contact/'
   '#/confidentialitate' = '/confidentialitate/'
 }
 
@@ -54,6 +55,7 @@ $pages = @(
   @{ Url='/galerie/'; Title='Galerie — FDBS'; Description='Imagini din istoria și proiectele FDBS.' },
   @{ Url='/despre-noi/'; Title='Despre FDBS'; Description='Istoria Fundației Donatorilor Benevoli de Sânge.' },
   @{ Url='/implica-te/'; Title='Implică-te — FDBS'; Description='Organizează o donare, devino voluntar sau sprijină FDBS.' },
+  @{ Url='/contact/'; Title='Contact — FDBS'; Description='Trimite un mesaj sau contactează conducerea Fundației Donatorilor Benevoli de Sânge.' },
   @{ Url='/confidentialitate/'; Title='Confidențialitate și cookies — FDBS'; Description='Politica de confidențialitate și preferințele cookies.' }
 )
 foreach ($city in $cities) {

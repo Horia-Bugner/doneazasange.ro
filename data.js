@@ -48,6 +48,13 @@ const FDBS_CENTRE_ADDRESSES = {
   'Spitalul Clinic „Prof. Dr. D. Gerota”':'Str. Vasile Vasilievici Stroescu nr. 29–31'
 };
 
+const FDBS_CENTRE_NOTES = {
+  'CRTS Timișoara': [
+    'CRTS Timișoara recomandă 73 de zile între donări pentru bărbați și 92 de zile pentru femei.',
+    'Persoanele de peste 50 de ani aflate la prima donare trebuie să aducă o adeverință de la medicul de familie care să ateste că nu suferă de o afecțiune cronică.'
+  ]
+};
+
 window.FDBS_DATA = {
   centres: [
     ['CRTS Timișoara','Timișoara','Timiș','45.737144','21.240118','07:30–13:30'],['CTS Sălaj','Zalău','Sălaj','47.195311','23.045391','07:30–12:00'],['CTS Vrancea','Focșani','Vrancea','45.705036','27.193296','L–J 08:00–13:00 · V 08:00–12:00'],['CTS Vâlcea','Râmnicu Vâlcea','Vâlcea','45.107872','24.363859','07:30–12:00'],['CTS Tulcea','Tulcea','Tulcea','45.177656','28.782682','07:30–11:00'],['CTS Teleorman','Alexandria','Teleorman','43.970303','25.332887','07:30–13:30'],['CTS Mureș','Târgu Mureș','Mureș','46.560582','24.583088','07:30–13:00'],['CTS Suceava','Suceava','Suceava','47.638604','26.240790','07:30–12:00'],['CTS Ialomița','Slobozia','Ialomița','44.567967','27.357847','08:00–13:00'],['CTS Sibiu','Sibiu','Sibiu','45.794567','24.159404','07:30–13:00'],
@@ -55,7 +62,7 @@ window.FDBS_DATA = {
     ['CTS Harghita','Miercurea Ciuc','Harghita','46.3539207','25.806833','07:30–?'],['CTS Covasna','Sfântu Gheorghe','Covasna','45.861377','25.787716',''],['CTS Gorj','Târgu Jiu','Gorj','45.032880','23.274310','07:30–?'],['CTS Giurgiu','Giurgiu','Giurgiu','43.894500','25.957210','07:30–13:00'],['CRTS Galați','Galați','Galați','45.426275','28.036627','L–J 08:00–13:00 · V 08:00–12:00'],['CTS Deva','Deva','Hunedoara','45.874536','22.907132','08:00–13:00'],['CTS Dâmbovița','Târgoviște','Dâmbovița','44.919720','25.456603','07:30–13:30'],['CRTS Constanța','Constanța','Constanța','44.186626','28.641157','07:30–13:30'],['CRTS Cluj','Cluj-Napoca','Cluj','46.775749','23.597750','07:30–13:30'],['CTS Călărași','Călărași','Călărași','44.206472','27.316847','08:00–12:00'],['CTS Buzău','Buzău','Buzău','45.146428','26.849871',''],['CTS Brașov','Brașov','Brașov','45.651391','25.599072','07:00–12:00'],
     ['CTS Brăila','Brăila','Brăila','45.269659','27.967396','07:30–11:00'],['CTS Botoșani','Botoșani','Botoșani','47.741933','26.661595',''],['CTS Bistrița','Bistrița','Bistrița-Năsăud','47.1294692','24.4845508','07:30–13:00'],['CTS Vaslui','Bârlad','Vaslui','46.232090','27.666587','07:30–12:30'],['CTS Maramureș','Baia Mare','Maramureș','47.657672','23.559924','07:30–13:00'],['CTS Bacău','Bacău','Bacău','46.559074','26.910925','07:30–12:30'],['CTS Arad','Arad','Arad','46.182743','21.306915','07:30–13:30'],['CTS Alba','Alba Iulia','Alba','46.072273','23.554879','07:30–11:00'],['CRTS Dolj','Craiova','Dolj','44.305912','23.791097','07:30–13:30'],['CTS Câmpulung','Câmpulung Muscel','Argeș','45.2753549','25.0461083',''],
     ['CTS București','București','București','44.453758','26.079757','07:30–13:30'],['CTS MApN — Spitalul Militar','București','București','44.442995','26.073507','07:00–12:00'],['Spitalul Universitar','București','București','44.436055','26.072064','08:00–12:30'],['Spitalul Clinic „Prof. Dr. D. Gerota”','București','București','44.440621','26.123954','08:30–12:00']
-  ].map((x,i)=>({id:i,name:x[0],city:x[1],county:x[2],lat:+x[3],lng:+x[4],hours:x[5],days:'Luni–Vineri',phone:'',email:'',address:FDBS_CENTRE_ADDRESSES[x[0]]||'Adresă editabilă în CMS',verified:x[5]?'FDBS confirmat':'De completat',active:true})),
+  ].map((x,i)=>({id:i,name:x[0],city:x[1],county:x[2],lat:+x[3],lng:+x[4],hours:x[5],days:'Luni–Vineri',phone:'',email:'',address:FDBS_CENTRE_ADDRESSES[x[0]]||'Adresă editabilă în CMS',notes:FDBS_CENTRE_NOTES[x[0]]||[],verified:x[5]?'FDBS confirmat':'De completat',active:true})),
   faqs: [
     ['Pot să donez?','Cine poate dona sânge?','În general, poți dona dacă ai între 18 și 60 de ani, cântărești între 50 și 130 kg, ești într-o stare bună de sănătate și îndeplinești criteriile medicale. Decizia finală aparține medicului care face triajul.','eligibilitate varsta greutate'],
     ['Pot să donez?','Am sub 50 kg. Pot dona o cantitate mai mică?','Nu. În România se recoltează o cantitate standard de aproximativ 450 ml.','greutate kilograme'],

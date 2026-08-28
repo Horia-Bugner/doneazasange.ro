@@ -52,6 +52,10 @@ const FDBS_CENTRE_NOTES = {
   'CRTS Timișoara': [
     'CRTS Timișoara recomandă 73 de zile între donări pentru bărbați și 92 de zile pentru femei, dar acceptă și minimul prevăzut de lege, de 56 de zile (8 săptămâni).',
     'Persoanele de peste 50 de ani aflate la prima donare trebuie să aducă o adeverință de la medicul de familie care să ateste că nu suferă de o afecțiune cronică.'
+  ],
+  'CTS Brașov': [
+    'Centrul primește aproximativ 90 de donatori pe zi, programați, dar și neprogramați, dacă au donat în ultimele 12 luni.',
+    'Este impus un minimum de 74 de zile între donări pentru bărbați și 92 de zile pentru femei.'
   ]
 };
 

@@ -56,6 +56,10 @@ const FDBS_CENTRE_NOTES = {
   'CTS Brașov': [
     'Centrul primește aproximativ 90 de donatori pe zi, programați, dar și neprogramați, dacă au donat în ultimele 12 luni.',
     'Este impus un minimum de 74 de zile între donări pentru bărbați și 92 de zile pentru femei.'
+  ],
+  'CRTS Constanța': [
+    'CRTS Constanța recomandă 75 de zile între donări pentru bărbați și 92 de zile pentru femei, dar acceptă și minimul prevăzut de lege, de 56 de zile (8 săptămâni).',
+    'Se donează cu programare în aplicații, fără programare sau cu programare telefonică la numărul 0774665815, între 12:30 și 14:30.'
   ]
 };
 

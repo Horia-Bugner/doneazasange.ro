@@ -1,4 +1,4 @@
-﻿param(
+param(
   [Parameter(Mandatory=$true)][string]$SiteRoot
 )
 
@@ -23,6 +23,9 @@ $routeMap = [ordered]@{
   '#/galerie' = '/galerie/'
   '#/istoric' = '/despre-noi/'
   '#/implica-te' = '/implica-te/'
+  '#/implica-te/organizeaza-o-donare' = '/implica-te/organizeaza-o-donare/'
+  '#/implica-te/devino-voluntar' = '/implica-te/devino-voluntar/'
+  '#/implica-te/sprijina-ne-financiar' = '/implica-te/sprijina-ne-financiar/'
   '#/contact' = '/contact/'
   '#/confidentialitate' = '/confidentialitate/'
 }
@@ -30,8 +33,10 @@ $routeMap = [ordered]@{
 foreach ($old in ($routeMap.Keys | Sort-Object Length -Descending)) {
   $index = $index.Replace(('href="' + $old + '"'), ('href="' + $routeMap[$old] + '"'))
 }
-$index = $index.Replace('app.js?v=1787045544','app.js?v=20260818-14').Replace('app.js?v=20260818-7','app.js?v=20260818-14').Replace('app.js?v=20260818-8','app.js?v=20260818-14').Replace('app.js?v=20260818-9','app.js?v=20260818-14').Replace('app.js?v=20260818-10','app.js?v=20260818-14').Replace('app.js?v=20260818-11','app.js?v=20260818-14').Replace('app.js?v=20260818-12','app.js?v=20260818-14').Replace('app.js?v=20260818-13','app.js?v=20260818-14')
-$index = $index.Replace('styles.css?v=20260817-3','styles.css?v=20260818-city3').Replace('styles.css?v=20260818-gallery1','styles.css?v=20260818-city3').Replace('styles.css?v=20260818-city1','styles.css?v=20260818-city3').Replace('styles.css?v=20260818-city2','styles.css?v=20260818-city3')
+$index = $index.Replace('app.js?v=20260906-donorium1','app.js?v=20260906-donorium1').Replace('app.js?v=20260906-donorium1','app.js?v=20260906-donorium1').Replace('app.js?v=20260906-donorium1','app.js?v=20260906-donorium1').Replace('app.js?v=20260906-donorium1','app.js?v=20260906-donorium1').Replace('app.js?v=20260906-donorium1','app.js?v=20260906-donorium1').Replace('app.js?v=20260906-donorium1','app.js?v=20260906-donorium1').Replace('app.js?v=20260906-donorium1','app.js?v=20260906-donorium1').Replace('app.js?v=20260906-donorium1','app.js?v=20260906-donorium1').Replace('app.js?v=20260906-donorium1','app.js?v=20260906-donorium1').Replace('app.js?v=20260906-donorium1','app.js?v=20260906-donorium1').Replace('app.js?v=20260906-donorium1','app.js?v=20260906-donorium1').Replace('app.js?v=20260906-donorium1','app.js?v=20260906-donorium1').Replace('app.js?v=20260906-donorium1','app.js?v=20260906-donorium1').Replace('app.js?v=20260906-donorium1','app.js?v=20260906-donorium1').Replace('app.js?v=20260906-donorium1','app.js?v=20260906-donorium1').Replace('app.js?v=20260906-donorium1','app.js?v=20260906-donorium1').Replace('app.js?v=20260906-donorium1','app.js?v=20260906-donorium1').Replace('app.js?v=20260906-donorium1','app.js?v=20260906-donorium1')
+$index = $index.Replace('<script src="data.js?v=1787045544"></script>','<script src="data.js?v=20260901-timisoara1"></script>').Replace('<script src="data.js?v=20260901-sibiu1"></script>','<script src="data.js?v=20260901-timisoara1"></script>').Replace('<script src="data.js?v=20260901-timisoara1"></script>','<script src="data.js?v=20260903-hunedoara1"></script>').Replace('<script src="data.js?v=20260903-hunedoara1"></script>','<script src="data.js?v=20260903-hunedoara2"></script>').Replace('<script src="data.js?v=20260903-hunedoara2"></script>','<script src="data.js?v=20260903-hunedoara3"></script>')
+$index = $index.Replace('bucharest-map-data.js?v=20260901-sibiu1','bucharest-map-data.js?v=1787045544').Replace('county-data.js?v=20260901-sibiu1','county-data.js?v=1787045544')
+$index = $index.Replace('styles.css?v=20260906-unarte-images1','styles.css?v=20260906-unarte-images1').Replace('styles.css?v=20260906-unarte-images1','styles.css?v=20260906-unarte-images1').Replace('styles.css?v=20260906-unarte-images1','styles.css?v=20260906-unarte-images1').Replace('styles.css?v=20260906-unarte-images1','styles.css?v=20260906-unarte-images1').Replace('styles.css?v=20260906-unarte-images1','styles.css?v=20260906-unarte-images1').Replace('styles.css?v=20260906-unarte-images1','styles.css?v=20260906-unarte-images1').Replace('styles.css?v=20260906-unarte-images1','styles.css?v=20260906-unarte-images1').Replace('styles.css?v=20260906-unarte-images1','styles.css?v=20260906-unarte-images1').Replace('styles.css?v=20260906-unarte-images1','styles.css?v=20260906-unarte-images1')
 Set-Content -LiteralPath $indexPath -Value $index -Encoding UTF8
 
 function ConvertTo-Slug([string]$value) {
@@ -55,6 +60,9 @@ $pages = @(
   @{ Url='/galerie/'; Title='Galerie — FDBS'; Description='Imagini din istoria și proiectele FDBS.' },
   @{ Url='/despre-noi/'; Title='Despre FDBS'; Description='Istoria Fundației Donatorilor Benevoli de Sânge.' },
   @{ Url='/implica-te/'; Title='Implică-te — FDBS'; Description='Organizează o donare, devino voluntar sau sprijină FDBS.' },
+  @{ Url='/implica-te/organizeaza-o-donare/'; Title='Organizează o donare — FDBS'; Description='Pașii pentru organizarea unei colecte de sânge împreună cu centrul local de transfuzie.' },
+  @{ Url='/implica-te/devino-voluntar/'; Title='Devino voluntar — FDBS'; Description='Modalități prin care te poți implica voluntar în activitatea și campaniile FDBS.' },
+  @{ Url='/implica-te/sprijina-ne-financiar/'; Title='Sprijină-ne financiar — FDBS'; Description='Modalități de susținere a proiectelor FDBS prin redirecționare, sponsorizare sau donație.' },
   @{ Url='/contact/'; Title='Contact — FDBS'; Description='Trimite un mesaj sau contactează conducerea Fundației Donatorilor Benevoli de Sânge.' },
   @{ Url='/confidentialitate/'; Title='Confidențialitate și cookies — FDBS'; Description='Politica de confidențialitate și preferințele cookies.' }
 )

@@ -19,7 +19,7 @@ const FDBS_CENTRE_ADDRESSES = {
   'CTS Olt':'Str. Ecaterina Teodoroiu nr. 28',
   'CTS Mehedinți':'Str. Topolniței nr. 6A',
   'CTS Iași':'Str. Nicolae Bălcescu nr. 21',
-  'CTS Hunedoara':'Str. Victoriei nr. 14, et. II, corp G, Spitalul Municipal Hunedoara',
+  'CTS Hunedoara':'Policlinica Spitalului Municipal Hunedoara et.2, Strada Victoriei nr. 14',
   'CTS Harghita':'Aleea Avântului nr. 1',
   'CTS Covasna':'Str. Bánki Donát nr. 15A',
   'CTS Gorj':'Str. 22 Decembrie 1989 nr. 28',
@@ -51,22 +51,30 @@ const FDBS_CENTRE_ADDRESSES = {
 const FDBS_CENTRE_NOTES = {
   'CRTS Timișoara': [
     'CRTS Timișoara recomandă 73 de zile între donări pentru bărbați și 92 de zile pentru femei, dar acceptă și minimul prevăzut de lege, de 56 de zile (8 săptămâni).',
-    'Persoanele de peste 50 de ani aflate la prima donare trebuie să aducă o adeverință de la medicul de familie care să ateste că nu suferă de o afecțiune cronică.'
+    'Persoanele de peste 50 de ani aflate la prima donare trebuie să aducă o adeverință de la medicul de familie care să ateste că nu suferă de o afecțiune cronică.',
+    'Se pot face colecte mobile pentru minimum 45 de donatori: Dr. Cojan — <button class="phone-reveal" type="button" data-phone-reveal aria-expanded="false" aria-controls="timisoara-mobile-phone">Arată numărul</button><span class="phone-value" id="timisoara-mobile-phone" hidden><a href="tel:+40721502238">0721.502.238</a></span>'
   ],
   'CTS Brașov': [
     'Centrul primește aproximativ 90 de donatori pe zi, programați, dar și neprogramați, dacă au donat în ultimele 12 luni.',
     'Este impus un minimum de 74 de zile între donări pentru bărbați și 92 de zile pentru femei.'
   ],
+  'CTS Sibiu': [
+    'Număr de contact: 0369.437.127<br>Centrul face și colecte mobile, pentru minimum 50 de donatori înscriși.'
+  ],
   'CRTS Constanța': [
     'CRTS Constanța recomandă 75 de zile între donări pentru bărbați și 92 de zile pentru femei, dar acceptă și minimul prevăzut de lege, de 56 de zile (8 săptămâni).',
     'Se donează cu programare în aplicații, fără programare sau cu programare telefonică la numărul 0774665815, între 12:30 și 14:30.'
+  ],
+  'CTS Hunedoara': [
+    'Centrul primește și donatori programați și neprogramați, având prioritate cei dintâi.',
+    'Donatorii de peste 50 de ani aflați la prima donare trebuie să aducă o scrisoare medicală de la medicul cardiolog.'
   ]
 };
 
 window.FDBS_DATA = {
   centres: [
     ['CRTS Timișoara','Timișoara','Timiș','45.737144','21.240118','07:30–13:30'],['CTS Sălaj','Zalău','Sălaj','47.195311','23.045391','07:30–12:00'],['CTS Vrancea','Focșani','Vrancea','45.705036','27.193296','L–J 08:00–13:00 · V 08:00–12:00'],['CTS Vâlcea','Râmnicu Vâlcea','Vâlcea','45.107872','24.363859','07:30–12:00'],['CTS Tulcea','Tulcea','Tulcea','45.177656','28.782682','07:30–11:00'],['CTS Teleorman','Alexandria','Teleorman','43.970303','25.332887','07:30–13:30'],['CTS Mureș','Târgu Mureș','Mureș','46.560582','24.583088','07:30–13:00'],['CTS Suceava','Suceava','Suceava','47.638604','26.240790','07:30–12:00'],['CTS Ialomița','Slobozia','Ialomița','44.567967','27.357847','08:00–13:00'],['CTS Sibiu','Sibiu','Sibiu','45.794567','24.159404','07:30–13:00'],
-    ['CTS Satu Mare','Satu Mare','Satu Mare','47.783298','22.857931','07:30–12:00'],['CTS Caraș-Severin','Reșița','Caraș-Severin','45.290125','21.885734','08:00–13:00'],['CTS Prahova','Ploiești','Prahova','44.941406','25.993446','L–J 07:30–12:30 · V 08:00–15:00'],['CTS Argeș','Pitești','Argeș','44.864053','24.859410','08:00–13:00'],['CTS Neamț','Piatra Neamț','Neamț','46.925872','26.371716','07:00–?'],['CTS Petroșani','Petroșani','Hunedoara','45.411485','23.375486','08:00–11:00'],['CTS Bihor','Oradea','Bihor','47.064358','21.945036','08:00–?'],['CTS Olt','Slatina','Olt','44.424562','24.373993','08:30–12:30'],['CTS Mehedinți','Drobeta-Turnu Severin','Mehedinți','44.630752','22.673040','07:00–?'],['CTS Iași','Iași','Iași','47.169666','27.580380','07:30–13:30'],['CTS Hunedoara','Hunedoara','Hunedoara','45.749928','22.907494',''],
+    ['CTS Satu Mare','Satu Mare','Satu Mare','47.783298','22.857931','07:30–12:00'],['CTS Caraș-Severin','Reșița','Caraș-Severin','45.290125','21.885734','08:00–13:00'],['CTS Prahova','Ploiești','Prahova','44.941406','25.993446','L–J 07:30–12:30 · V 08:00–15:00'],['CTS Argeș','Pitești','Argeș','44.864053','24.859410','08:00–13:00'],['CTS Neamț','Piatra Neamț','Neamț','46.925872','26.371716','07:00–?'],['CTS Petroșani','Petroșani','Hunedoara','45.411485','23.375486','08:00–11:00'],['CTS Bihor','Oradea','Bihor','47.064358','21.945036','08:00–?'],['CTS Olt','Slatina','Olt','44.424562','24.373993','08:30–12:30'],['CTS Mehedinți','Drobeta-Turnu Severin','Mehedinți','44.630752','22.673040','07:00–?'],['CTS Iași','Iași','Iași','47.169666','27.580380','07:30–13:30'],['CTS Hunedoara','Hunedoara','Hunedoara','45.749928','22.907494','08:00–12:45'],
     ['CTS Harghita','Miercurea Ciuc','Harghita','46.3539207','25.806833','07:30–?'],['CTS Covasna','Sfântu Gheorghe','Covasna','45.861377','25.787716',''],['CTS Gorj','Târgu Jiu','Gorj','45.032880','23.274310','07:30–?'],['CTS Giurgiu','Giurgiu','Giurgiu','43.894500','25.957210','07:30–13:00'],['CRTS Galați','Galați','Galați','45.426275','28.036627','L–J 08:00–13:00 · V 08:00–12:00'],['CTS Deva','Deva','Hunedoara','45.874536','22.907132','08:00–13:00'],['CTS Dâmbovița','Târgoviște','Dâmbovița','44.919720','25.456603','07:30–13:30'],['CRTS Constanța','Constanța','Constanța','44.186626','28.641157','07:30–13:30'],['CRTS Cluj','Cluj-Napoca','Cluj','46.775749','23.597750','07:30–13:30'],['CTS Călărași','Călărași','Călărași','44.206472','27.316847','08:00–12:00'],['CTS Buzău','Buzău','Buzău','45.146428','26.849871',''],['CTS Brașov','Brașov','Brașov','45.651391','25.599072','07:00–12:00'],
     ['CTS Brăila','Brăila','Brăila','45.269659','27.967396','07:30–11:00'],['CTS Botoșani','Botoșani','Botoșani','47.741933','26.661595',''],['CTS Bistrița','Bistrița','Bistrița-Năsăud','47.1294692','24.4845508','07:30–13:00'],['CTS Vaslui','Bârlad','Vaslui','46.232090','27.666587','07:30–12:30'],['CTS Maramureș','Baia Mare','Maramureș','47.657672','23.559924','07:30–13:00'],['CTS Bacău','Bacău','Bacău','46.559074','26.910925','07:30–12:30'],['CTS Arad','Arad','Arad','46.182743','21.306915','07:30–13:30'],['CTS Alba','Alba Iulia','Alba','46.072273','23.554879','07:30–11:00'],['CRTS Dolj','Craiova','Dolj','44.305912','23.791097','07:30–13:30'],['CTS Câmpulung','Câmpulung Muscel','Argeș','45.2753549','25.0461083',''],
     ['CTS București','București','București','44.453758','26.079757','07:30–13:30'],['CTS MApN — Spitalul Militar','București','București','44.442995','26.073507','07:00–12:00'],['Spitalul Universitar','București','București','44.436055','26.072064','08:00–12:30'],['Spitalul Clinic „Prof. Dr. D. Gerota”','București','București','44.440621','26.123954','08:30–12:00']

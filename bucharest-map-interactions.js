@@ -4,7 +4,7 @@
   const popupHtml=c=>`<b>${c.name}</b><small>${c.address}, ${c.city}<br>${c.hours?label(c):'Programul urmează să fie completat'}</small>`;
   function enhance(){
     const container=document.getElementById('bucharest-map');
-    if(!container||!window.maplibregl)return;
+    if(!container){currentMap?.remove();currentMap=null;return}if(!window.maplibregl)return;
     currentMap?.remove();container.innerHTML='';
     currentMap=new maplibregl.Map({container,style:'https://tiles.openfreemap.org/styles/bright',center:[26.095,44.442],zoom:12,minZoom:10,maxZoom:17,attributionControl:false});
     currentMap.addControl(new maplibregl.NavigationControl({showCompass:false}),'top-right');
@@ -19,7 +19,7 @@
     centres.forEach((c,i)=>{
       const directions=document.querySelector(`[data-city-centre-id="${c.id}"] a[href*="google.com/maps/dir"]`);if(directions)directions.href=`https://www.google.com/maps/dir/?api=1&destination=${c.lat},${c.lng}`;
       const wrap=document.createElement('div'),button=document.createElement('button');
-      wrap.className='map-centre-marker';button.className='bucharest-marker';button.type='button';button.innerHTML=`<span>${i+1}</span>`;button.setAttribute('aria-label',`${c.name}, ${c.address}`);wrap.append(button);
+      wrap.className='map-centre-marker';if(c.name==='Spitalul Clinic de Urgență (Floreasca)')wrap.classList.add('floreasca-marker');button.className='bucharest-marker';button.type='button';button.innerHTML=`<span>${i+1}</span>`;button.setAttribute('aria-label',`${c.name}, ${c.address}`);wrap.append(button);
       const popup=new maplibregl.Popup({closeButton:false,closeOnClick:false,offset:30,className:'fdbs-centre-popup',maxWidth:'260px'}).setHTML(popupHtml(c));
       const show=()=>popup.setLngLat([c.lng,c.lat]).addTo(currentMap),hide=()=>popup.remove();
       button.addEventListener('mouseenter',show);button.addEventListener('mouseleave',hide);button.addEventListener('focus',show);button.addEventListener('blur',hide);
@@ -27,5 +27,5 @@
       new maplibregl.Marker({element:wrap,anchor:'bottom'}).setLngLat([c.lng,c.lat]).addTo(currentMap);
     });
   }
-  window.addEventListener('hashchange',()=>setTimeout(enhance));enhance();
+  window.addEventListener('fdbs:route-rendered',enhance);enhance();
 })();

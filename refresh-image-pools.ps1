@@ -6,7 +6,7 @@ $galleryRoot = Join-Path $assetsRoot 'gallery-pool'
 $extensions = @('.jpg', '.jpeg', '.png', '.webp', '.avif')
 
 New-Item -ItemType Directory -Force -Path $heroRoot | Out-Null
-$periods = @('1996-2000', '2001-2004', '2005-2009', '2010-2014', '2015-2019', '2020-prezent')
+$periods = @('1996-2000', '2001-2004', '2005-2009', '2010-2014', '2015-2019', '2020-prezent', '2021-2024', '2025-2026')
 foreach ($period in $periods) {
     New-Item -ItemType Directory -Force -Path (Join-Path $galleryRoot $period) | Out-Null
 }

@@ -34,10 +34,10 @@ $routeMap = [ordered]@{
 foreach ($old in ($routeMap.Keys | Sort-Object Length -Descending)) {
   $index = $index.Replace(('href="' + $old + '"'), ('href="' + $routeMap[$old] + '"'))
 }
-$index = $index -replace "app\.js\?v=[^`"']+", 'app.js?v=20260908-contact-form-path'
+$index = $index -replace "app\.js\?v=[^`"']+", 'app.js?v=20260908-avocatoo'
 $index = $index.Replace('<script src="data.js?v=20260908-floreasca-position3"></script>','<script src="data.js?v=20260908-floreasca-position3"></script>').Replace('<script src="data.js?v=20260908-floreasca-position3"></script>','<script src="data.js?v=20260908-floreasca-position3"></script>').Replace('<script src="data.js?v=20260908-floreasca-position3"></script>','<script src="data.js?v=20260908-floreasca-position3"></script>').Replace('<script src="data.js?v=20260908-floreasca-position3"></script>','<script src="data.js?v=20260908-floreasca-position3"></script>').Replace('<script src="data.js?v=20260908-floreasca-position3"></script>','<script src="data.js?v=20260908-floreasca-position3"></script>')
 $index = $index.Replace('bucharest-map-data.js?v=20260907-mehedinti1','bucharest-map-data.js?v=20260907-mehedinti1').Replace('county-data.js?v=20260907-mehedinti1','county-data.js?v=20260907-mehedinti1')
-$index = $index.Replace('styles.css?v=20260908-floreasca-anchor','styles.css?v=20260908-floreasca-anchor').Replace('styles.css?v=20260908-floreasca-anchor','styles.css?v=20260908-floreasca-anchor').Replace('styles.css?v=20260908-floreasca-anchor','styles.css?v=20260908-floreasca-anchor').Replace('styles.css?v=20260908-floreasca-anchor','styles.css?v=20260908-floreasca-anchor').Replace('styles.css?v=20260908-floreasca-anchor','styles.css?v=20260908-floreasca-anchor').Replace('styles.css?v=20260908-floreasca-anchor','styles.css?v=20260908-floreasca-anchor').Replace('styles.css?v=20260908-floreasca-anchor','styles.css?v=20260908-floreasca-anchor').Replace('styles.css?v=20260908-floreasca-anchor','styles.css?v=20260908-floreasca-anchor').Replace('styles.css?v=20260908-floreasca-anchor','styles.css?v=20260908-floreasca-anchor')
+$index = $index -replace "styles\.css\?v=[^`"']+", 'styles.css?v=20260908-how-step-photos'
 Set-Content -LiteralPath $indexPath -Value $index -Encoding UTF8
 
 function ConvertTo-Slug([string]$value) {

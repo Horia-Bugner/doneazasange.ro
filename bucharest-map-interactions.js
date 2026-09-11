@@ -1,7 +1,7 @@
 (()=>{
   let currentMap;
   const label=c=>c.hours?`${['CTS Prahova','CTS Vrancea','CRTS Galați'].includes(c.name)?'':`${c.days}, `}${c.hours}`:c.days;
-  const popupHtml=c=>`<b>${c.name}</b><small>${c.address}, ${c.city}<br>${c.hours?label(c):'Programul urmează să fie completat'}</small>`;
+  const popupHtml=c=>`<b>${c.name}</b><small>${c.address.endsWith(c.city)?c.address:c.address+", "+c.city}<br>${c.hours?label(c):'Programul urmează să fie completat'}</small>`;
   function enhance(){
     const container=document.getElementById('bucharest-map');
     if(!container){currentMap?.remove();currentMap=null;return}if(!window.maplibregl)return;

@@ -1,0 +1,258 @@
+{
+  "https://doneazasange.ro/articole/": {
+    "digest": "2a9b1f764d4140cf4b8f1f26607023803854705283d4cf24f9a16b147dfee84b",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/centre/alba-iulia/": {
+    "digest": "8ec73eb6b9a77a016a3749df719931c93fcc3ab9197a45efe833ef4e6162125c",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/centre/alexandria/": {
+    "digest": "75c44541f807df3c715da5a37401e230b666064c06dd310032044fb05536a4a8",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/centre/arad/": {
+    "digest": "f7dd5fcfdcdf6699835918b57bd6913282a8486ea0b69436f9eea3879d9d1435",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/centre/bacau/": {
+    "digest": "f7ec5edd11de11d7ada305f2ff3357520ed25ecea51067fcadff1773a2f52438",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/centre/baia-mare/": {
+    "digest": "9a2d11e50966434110ce970ac3638410c40030b146bbc0b7abca28748dd30d0d",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/centre/barlad/": {
+    "digest": "2bb40541edb9ffacc50c7699f1ea0bbcf2ac6b51d2c2d815020d2674adc66497",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/centre/bistrita/": {
+    "digest": "813098a601e6dc0179e12feec0c966bfa856960bd0a0d7be4f58b914689bbd53",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/centre/botosani/": {
+    "digest": "4a17f26da663ed855faf6e67a4153a45eb382c756b2b6df10620fd4dcb00ae68",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/centre/braila/": {
+    "digest": "63ef0ad99b7309959237656f05ba24079783d537448985ed38ab59ace9424ba1",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/centre/brasov/": {
+    "digest": "5bb4ef002ce69783f47eb2e364722b5fbe38c7189901bc818928e40c636aa742",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/centre/bucuresti/": {
+    "digest": "f1ef763c741126de9eafb1c98f631edea3a343f69fbf53da5d913ec3b8dc5cec",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/centre/buzau/": {
+    "digest": "484358f43fb0dbfae37fc5d362cab7e6596a512473c5d81ea640e2675b995569",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/centre/calarasi/": {
+    "digest": "48d574d2b36d3d3b2b258e76994f37564c012f04a2e14123ea895f487799c3db",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/centre/campulung-muscel/": {
+    "digest": "2b77272031cbb521148e28b2dfc7fdaaa1b2d3e4ef26236fe129d3154dd536af",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/centre/cluj-napoca/": {
+    "digest": "2694b32aac697044cd40e961537028589336fef365753fcc6bbfa676c8ac42f3",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/centre/constanta/": {
+    "digest": "721c6dc97cc13b594caa83acdcca6a944ded9c91374d5e81c3237dde665e787e",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/centre/craiova/": {
+    "digest": "a4085d2efc8ef544e8dc53f6898edabc16499fcf4901fa63176186453c9c1738",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/centre/deva/": {
+    "digest": "77383d054bc83c798c35b364a11b1622515c40e41e2d57215f4b24b80c7c6b20",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/centre/drobeta-turnu-severin/": {
+    "digest": "b5c5846524dc28eaee9c77af7552cbdc63bcdc89c5c7375286dacdc0c505355e",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/centre/focsani/": {
+    "digest": "fb6d94904b5a7a18d9e690babce6290f06d52baa43f38890ee6403ad5c489272",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/centre/galati/": {
+    "digest": "0f55409d09ceebe7e70e4403101e5fa1142b32d4b2806aa547407877fe7d1d78",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/centre/giurgiu/": {
+    "digest": "0584254adf65830a4b6b8b1143fedb18a0d3bc1e4d8f731cc4eaa27295fcc30c",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/centre/hunedoara/": {
+    "digest": "06f243bd3b7d2e0970bba39c941115caf0035250c8bdf542a1b5dcaeb30fb9c1",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/centre/iasi/": {
+    "digest": "f9a2b072d71bf08d4a70b055e56ebc865222101c0ae08d4e745e55fd8769627a",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/centre/": {
+    "digest": "108becbd672ec6b4d77f5c65a17bd2051a9eb3900da30bf1ac922c5090573641",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/centre/miercurea-ciuc/": {
+    "digest": "85dbddfc578b2f876da22968f547fb708de253afbe02ed763ad9d7bd07c1ab64",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/centre/oradea/": {
+    "digest": "f658fa0e75db1cf4aecd40aa973fbbbc51352d120c3bf076adc3182f89724685",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/centre/petrosani/": {
+    "digest": "dfe9a4cbb344a062ee2fee88972aff6049a713d58bb0d31a99ffbceaa73679fd",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/centre/piatra-neamt/": {
+    "digest": "d4e9c15afc0d72af48bb4c26332824af470e8561a7c4e2479a3738c38b422c50",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/centre/pitesti/": {
+    "digest": "5cf4083f9610595c2c0135eaf5a7f7dbb831538283e3bfa3b253cbcdb3ab7438",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/centre/ploiesti/": {
+    "digest": "3bec370aee940df6f7b2c6645d7f7aefe07d051d15969d06e8674042c391e0d3",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/centre/ramnicu-valcea/": {
+    "digest": "a50edff8728c1d52fa7a9146dbf70206427ee3c3af565edefdad1bf172f2b053",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/centre/resita/": {
+    "digest": "546c6df65d54f715acbc75e45b9e7577d1087fece88b70c1d798bd1249c1b45d",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/centre/satu-mare/": {
+    "digest": "44efe3d10f136bca886764c9a1427c2f20fe982ab67056c5d8afd5c9c828f709",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/centre/sfantu-gheorghe/": {
+    "digest": "d492c34da05984aed6586e9252bf9ce9da79052a2f4fde295b522b6329455e2d",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/centre/sibiu/": {
+    "digest": "2e99b2e73030e4fda793eb56873949a3fb6e1e834e6ab023c9d2e4e6cfbc9b02",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/centre/slatina/": {
+    "digest": "e48d880ba04fe8cd9378a3b1a6b0374e3a1789d2f1eb1c4c50a0da7c351d7943",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/centre/slobozia/": {
+    "digest": "40ae57656cf259b2629c55736dd11a5f49999bc5e03f1de5bc2441f0d65f8c5a",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/centre/suceava/": {
+    "digest": "e6384d66fb428fd245cd96da0f590097ce26aa4fc48e4752186d3868855cd1a7",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/centre/targoviste/": {
+    "digest": "8c9cc048931ad8e4e391c0e54b0ac93ec38f4aa8a7da487724e3d037d5eb909c",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/centre/targu-jiu/": {
+    "digest": "87a095f40ba283c4cd41474afe01b21e8294bfe3ebc4ac75dd3d8b081e238e83",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/centre/targu-mures/": {
+    "digest": "b3ccd54006a19330bf4ce9b575f4eb879fefc71c0729a7532707e7dbf6d1279d",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/centre/timisoara/": {
+    "digest": "e9c366d47df086cf2737b2c962a7ab26e66ff2e2f6efb5a754f2e1d06ff445ff",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/centre/tulcea/": {
+    "digest": "ca21c2ae1c2699c1f874aa2c8bd24e8eb6858c599384fcceed5bfa16c0930723",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/centre/zalau/": {
+    "digest": "3cf72fcf922953018973f125abdff62a9ae4fe4dfbd6b6bd636d2ee9ff2ed7a1",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/confidentialitate/": {
+    "digest": "17bd11dbdbc39d91ae0c02d7b91f0fcc6924395da923f10fe1f50dd69b301c66",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/contact/": {
+    "digest": "9d3203440391c6df63967d2a23fc6c92be7b74b23ceb148ff40a502b9aaf0dff",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/criterii-eligibilitate/": {
+    "digest": "1531b631229828850d3bb797c4e8ba6a1b1e5714777e63d7019291c9f9fd1d8a",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/cum-donez/": {
+    "digest": "fb89e17302109306f5675cdf26f6bc7f7da44c7924df70547017a4c796a75366",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/despre-noi/": {
+    "digest": "59882306c65638d64ddeb4ec912f4aa67e549850b0662a48a057adaec928711d",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/donorium/": {
+    "digest": "40c89c2d3654031dfcd95e1318a3d488ee6d259077aa3314371ec0cff1475a3c",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/galerie/": {
+    "digest": "689c8b1054f8ced2a8c44d402bc518b9c55f2811f9554d7da27297d16208d205",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/ghidul-donatorului/": {
+    "digest": "d01c2ffd020b0c1b0267b53cff862dbb6f61a3a21c838bc3edc31a7b2df9b69b",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/implica-te/devino-voluntar/": {
+    "digest": "73133e739dce77fc7c85d5fb8719fbcc0e8ad46be0653d872251b25fc47c40dd",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/implica-te/": {
+    "digest": "353673002f6f83f424c0653e35a7cdf217c357732a3a27aef460c100ec416c3d",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/implica-te/organizeaza-o-donare/": {
+    "digest": "5f86c910b54660b1b3462b2afd0304df75405bfb6073e8d89134f5ae60d4a3a0",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/implica-te/sprijina-ne-financiar/": {
+    "digest": "0613dea814a98f022d1484516bb3a6c8083b368517faac5d8f44d667ec8413fa",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/implica-te/sprijina-ne-financiar/redirectioneaza-3-5/": {
+    "digest": "ab17e1b4d2afd0c2f1b46caabca104a07a50908e947efd2659b078529f314aa0",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/": {
+    "digest": "24811545ce7f5d2fd12b56c33d533550637e40968376ce602f099a4ce7e22f4f",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/intrebari-frecvente/": {
+    "digest": "d4cee60e1ee691542fb343598caf871a4d8c744bde32778e0a16aaa0e1bb638a",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/legislatie/": {
+    "digest": "34289a29e69e3a9c847c85dc1e6f478cf94eb70b0f654e78fb80eb7086f34d5c",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/pot-sa-donez/": {
+    "digest": "c68a474787f743a01102e1e4a849131e3f9aa3c81315785ea8ddb172419acfee",
+    "lastmod": "2026-09-14"
+  },
+  "https://doneazasange.ro/proiecte-actuale/": {
+    "digest": "275776415a60b23d2dcd23a0cc2caffde6979bbadcbea30f87a46d2ac506c043",
+    "lastmod": "2026-09-14"
+  }
+}

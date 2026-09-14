@@ -45,3 +45,9 @@ This folder is the canonical Codex project for the FDBS website. Make site chang
 - For content changes, verify the generated data count and affected routes.
 - For interface changes, test the relevant route at desktop and mobile widths.
 - Do not discard unrelated user edits or replace approved assets.
+
+## Before publishing
+
+- Run `node generate-seo.cjs` after source edits to keep JSON-LD, `centre.json`, and `sitemap.xml` aligned. Commit `.seo-state.json` to preserve accurate sitemap change dates, but do not deploy it or the generator.
+- Keep centre directory metadata based on the same approved source and rendered schedule information. Do not treat metadata generation as medical or schedule verification.
+- Publish only actual Romanian pages until the user approves English/Hungarian translations; add hreflang only for live translated counterparts.

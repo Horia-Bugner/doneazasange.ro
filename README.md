@@ -29,3 +29,11 @@ Request or apply FAQ changes directly in `faq-data.js`. The site no longer depen
 1. Add or remove approved photographs from the relevant pool folder.
 2. Run `refresh-image-pools.cmd`.
 3. Refresh the website.
+
+### Search metadata and public centre directory
+
+Run `node generate-seo.cjs` after editing published pages, `data.js`, `app.js`, or FAQ content and before publishing. It updates the embedded JSON-LD, `centre.json`, and `sitemap.xml` from the current source without changing visible copy. Commit `.seo-state.json` with these generated files so unchanged pages retain their sitemap dates. Do not deploy the generator or `.seo-state.json`.
+
+`centre.json` contains 48 current public centre records with source page URLs, original schedules, contacts, notes and the schedule date displayed by the site when available. Its generation date is not a claim that a centre was contacted or verified. Incomplete hours are retained as text and omitted from structured opening-hour specifications. Centres are independent directory entries, not departments of FDBS.
+
+Published language is Romanian. Add English and Hungarian URL variants and reciprocal hreflang only after their reviewed translations are published. Do not advertise untranslated pages as language alternatives.

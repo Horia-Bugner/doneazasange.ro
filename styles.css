@@ -170,3 +170,8 @@
 }
 
 @media(max-width:760px){.step-with-image{grid-template-columns:60px minmax(0,1fr);align-items:start}.step-with-image .step-number{margin-bottom:0}.step-with-image>div:last-child{display:contents}.step-with-image h2{grid-column:2;align-self:center;margin:0}.step-with-image p,.step-with-image .step-image{grid-column:1/-1}}
+
+@media(max-width:1080px){.site-header.open .header-actions .lang{display:flex}}
+html[lang="hu"] .site-header nav{gap:.8rem;font-size:13px}html[lang="hu"] .page-hero h1{overflow-wrap:anywhere}html[lang="hu"] .quick-check .criterion b{font-size:23px}
+
+@media(min-width:761px){.directory-layout>.directory-list{max-height:none;min-height:0;align-self:stretch;contain:size;overflow-y:auto}}

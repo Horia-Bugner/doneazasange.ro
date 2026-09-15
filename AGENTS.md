@@ -51,3 +51,14 @@ This folder is the canonical Codex project for the FDBS website. Make site chang
 - Run `node generate-seo.cjs` after source edits to keep JSON-LD, `centre.json`, and `sitemap.xml` aligned. Commit `.seo-state.json` to preserve accurate sitemap change dates, but do not deploy it or the generator.
 - Keep centre directory metadata based on the same approved source and rendered schedule information. Do not treat metadata generation as medical or schedule verification.
 - Publish only actual Romanian pages until the user approves English/Hungarian translations; add hreflang only for live translated counterparts.
+
+## Hungarian version
+- The user authorized Hungarian translation and publishing on 2026-09-15. Maintain RO and HU pages together.
+- Translation source: `i18n/hu.json`; generated browser dictionary: `i18n/hu.js`; shared runtime: `locale.js`.
+- Run `node generate-hu.cjs` with Playwright available, then `node generate-seo.cjs` before publishing. The Hungarian generator writes 64 routes under `hu/`, including translated initial content.
+- Preserve official centre names, addresses, original documents, and all approved medical values. Translate changed Romanian copy into Hungarian as well.
+- Publish `locale.js`, `i18n/hu.js`, and `hu/` with the site; do not publish generators, translation source JSON, or `.seo-state.json`.
+
+- Never use `_1MO5255` (hand holding a red heart during blood donation) as a Hungarian homepage hero. The language-specific exclusion in `applyDailyHomeHero` must survive image-pool regeneration.
+
+- Hungarian locality names are maintained in `i18n/hu-places.json` and applied by `locale.js`. Preserve Romanian route slugs and centre identifiers; search must accept both languages.

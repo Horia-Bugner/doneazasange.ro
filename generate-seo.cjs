@@ -32,15 +32,16 @@ const entries = centres.map(c=>{
 });
 assert.equal(new Set(entries.map(c=>c.id)).size,entries.length);
 const days=['Monday','Tuesday','Wednesday','Thursday','Friday'].map(d=>'https://schema.org/'+d);
+function huPlace(value){const places=JSON.parse(read('i18n/hu-places.json'));for(const [ro,hu] of Object.entries(places).sort((a,b)=>b[0].length-a[0].length))value=value.replaceAll(ro,hu);return value}
 function centreNode(c){
  const node={'@type':['MedicalOrganization','Place'],'@id':c.url+'#'+c.id,name:c.name,url:c.url,address:{'@type':'PostalAddress',streetAddress:c.address,addressLocality:c.city,addressRegion:c.county,addressCountry:'RO'},geo:{'@type':'GeoCoordinates',latitude:c.latitude,longitude:c.longitude}};
  if(c.phoneNumbers.length)node.telephone=c.phoneNumbers;
  if(c.email)node.email=c.email;
  const description=[c.hours?`${c.days}, ${c.hours}`:'Programul urmează să fie completat.',...c.notes,'Toate centrele din țară sunt închise în zilele de sărbătoare națională.'];
- node.description=description.join(' ');
+ const hu=c.url.includes('/hu/'),dictionary=hu?JSON.parse(read('i18n/hu.json')):{};node.description=description.map(s=>dictionary[s]||s.replace(hu?/Luni–Vineri/g:/$^/g,'Hétfő–péntek')).join(' ');
  const times=c.hours?.match(/^(\d{2}:\d{2})[–-](\d{2}:\d{2})$/);
  if(times && c.days==='Luni–Vineri')node.openingHoursSpecification={'@type':'OpeningHoursSpecification',dayOfWeek:days,opens:times[1],closes:times[2]};
- return node;
+ if(c.url.includes('/hu/')){node.name=huPlace(node.name);node.address.addressLocality=huPlace(node.address.addressLocality);node.address.addressRegion=JSON.parse(read('i18n/hu-counties.json'))[c.county]||huPlace(c.county);node.description=huPlace(node.description)}return node;
 }
 function pageFiles(dir='') {
  return fs.readdirSync(path.join(root,dir),{withFileTypes:true}).flatMap(e=>{
@@ -53,24 +54,27 @@ const files=pageFiles().sort();const pages=files.map(file=>{const html=read(file
 assert.equal(new Set(pages.map(p=>p.url)).size,pages.length);
 const urls=new Set(pages.map(p=>p.url));entries.forEach(c=>assert(urls.has(c.url),`Missing route ${c.url}`));
 const org={'@type':'Organization','@id':origin+'/#organization',name:'Fundația Donatorilor Benevoli de Sânge',alternateName:'FDBS',url:origin+'/',logo:origin+'/assets/logo-fdbs-oficial.jpg'};
-const website={'@type':'WebSite','@id':origin+'/#website',url:origin+'/',name:'FDBS — Donează sânge',inLanguage:'ro',publisher:{'@id':org['@id']}};
+const website={'@type':'WebSite','@id':origin+'/#website',url:origin+'/',name:'FDBS — Donează sânge',inLanguage:['ro','hu'],publisher:{'@id':org['@id']}};
 const stateFile='.seo-state.json',previous=fs.existsSync(path.join(root,stateFile))?JSON.parse(read(stateFile)):{};
 const state={};const today=new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Bucharest',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
 for(const p of pages){
- const page={'@type':p.url===origin+'/centre/'?'CollectionPage':'WebPage','@id':p.url+'#webpage',url:p.url,name:p.title,description:p.description,inLanguage:'ro',isPartOf:{'@id':website['@id']},publisher:{'@id':org['@id']}};
+ const page={'@type':p.url===origin+'/centre/'?'CollectionPage':'WebPage','@id':p.url+'#webpage',url:p.url,name:p.title,description:p.description,inLanguage:p.url.includes('/hu/')?'hu':'ro',isPartOf:{'@id':website['@id']},publisher:{'@id':org['@id']}};
  const graph=[org,website,page];
- const cityEntries=entries.filter(c=>c.url===p.url);
+ const isHu=p.url.includes('/hu/');const cityEntries=entries.filter(c=>c.url===p.url.replace(origin+'/hu/',origin+'/')).map(c=>isHu?{...c,url:c.url.replace(origin+'/',origin+'/hu/')}:c);
  if(cityEntries.length){
-  const breadcrumbs={'@type':'BreadcrumbList','@id':p.url+'#breadcrumb',itemListElement:[{'@type':'ListItem',position:1,name:'Unde pot dona?',item:origin+'/centre/'},{'@type':'ListItem',position:2,name:cityEntries[0].city,item:p.url}]};
+  const breadcrumbs={'@type':'BreadcrumbList','@id':p.url+'#breadcrumb',itemListElement:[{'@type':'ListItem',position:1,name:isHu?'Hol adhatok vért?':'Unde pot dona?',item:origin+(isHu?'/hu':'')+'/centre/'},{'@type':'ListItem',position:2,name:isHu?huPlace(cityEntries[0].city):cityEntries[0].city,item:p.url}]};
   page.breadcrumb={'@id':breadcrumbs['@id']};page.mainEntity=cityEntries.map(c=>({'@id':c.url+'#'+c.id}));graph.push(breadcrumbs,...cityEntries.map(centreNode));
  }
- if(p.url===origin+'/centre/'){
-  const list={'@type':'ItemList','@id':p.url+'#directory',numberOfItems:entries.length,itemListElement:entries.map((c,i)=>({'@type':'ListItem',position:i+1,name:c.name,url:c.url}))};graph.push(list);page.mainEntity={'@id':list['@id']};
+ if(p.url===origin+'/centre/'||p.url===origin+'/hu/centre/'){
+  const list={'@type':'ItemList','@id':p.url+'#directory',numberOfItems:entries.length,itemListElement:entries.map((c,i)=>({'@type':'ListItem',position:i+1,name:isHu?huPlace(c.name):c.name,url:isHu?c.url.replace(origin+'/',origin+'/hu/'):c.url}))};graph.push(list);page.mainEntity={'@id':list['@id']};
  }
  let html=p.html.replace(/\s*<script id="fdbs-structured-data" type="application\/ld\+json">[\s\S]*?<\/script>/g,'').replace(/\s*<link rel="alternate" type="application\/json"[^>]*>/g,'');
  const block='\n  <script id="fdbs-structured-data" type="application/ld+json">'+json({'@context':'https://schema.org','@graph':graph})+'</script>\n  <link rel="alternate" type="application/json" title="Directorul centrelor de donare" href="https://doneazasange.ro/centre.json" />';
- html=html.replace('</head>',block+'\n</head>');
- const digest=crypto.createHash('sha256').update(html).update(app).update(read('data.js')).update(read('faq-data.js')).update(read('styles.css')).digest('hex');
+ const roUrl=p.url.replace(origin+'/hu/',origin+'/');const huUrl=roUrl.replace(origin+'/',origin+'/hu/');
+ const alternatives=urls.has(huUrl)?'\n<link rel="alternate" hreflang="ro" href="'+roUrl+'" /><link rel="alternate" hreflang="hu" href="'+huUrl+'" /><link rel="alternate" hreflang="x-default" href="'+roUrl+'" />':'';
+ html=html.replace(/\s*<link[^>]*hreflang=[^>]*>/g,'');
+ html=html.replace('</head>',block+alternatives+'\n</head>');
+ const digest=crypto.createHash('sha256').update(html).update(app).update(read('data.js')).update(read('faq-data.js')).update(read('styles.css')).update(fs.existsSync(path.join(root,'i18n/hu.json'))?read('i18n/hu.json'):'').digest('hex');
  state[p.url]={digest,lastmod:previous[p.url]?.digest===digest?previous[p.url].lastmod:today};
  write(p.file,html);
 }

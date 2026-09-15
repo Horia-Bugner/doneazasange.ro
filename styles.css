@@ -136,3 +136,35 @@
 @media(max-width:760px){.criteria-analysis-step{grid-template-columns:minmax(0,1fr);row-gap:16px}.criteria-analysis-step .step-number{line-height:1}.criteria-analysis-step>div{min-width:0}}
 
 .privacy-page .page-hero p,.privacy-content p{text-indent:1.5em}
+
+/* Compact homepage eligibility and donation overview. */
+.section:has(.quick-check),.section:has(.process){padding-top:32px;padding-bottom:32px}
+.quick-check{gap:32px}
+.quick-check h2{margin:0 0 12px}
+.quick-check p{margin:0 0 16px;line-height:1.5}
+.quick-check .criteria{gap:10px}
+.quick-check .criterion{padding:14px 18px;line-height:1.35}
+.quick-check .criterion b{font-size:25px;line-height:1.15;margin-bottom:3px}
+.quick-check .criterion span{font-size:15px}
+.section:has(.process) .section-head{margin-bottom:18px;gap:16px}
+.section:has(.process) h2{margin:0}
+.process{grid-template-columns:repeat(4,minmax(0,1fr))}
+.process>div{display:flex;align-items:center;gap:10px;min-width:0;min-height:0;padding:16px 14px}
+.process>div>span{flex:0 0 auto;line-height:1.3}
+.process h3{margin:0;font-size:16px;line-height:1.3}
+@media(max-width:1000px){.process{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){
+.section:has(.quick-check),.section:has(.process){padding-top:24px;padding-bottom:24px}
+.quick-check{gap:20px}
+.quick-check h2{margin-bottom:10px}
+.quick-check p{margin-bottom:14px}
+.quick-check .criteria{gap:8px}
+.quick-check .criterion{padding:10px 14px}
+.quick-check .criterion b{font-size:23px;margin-bottom:2px}
+.quick-check .criterion span{font-size:14px}
+.section:has(.process) .section-head{margin-bottom:14px}
+.section:has(.process) h2{margin-bottom:10px}
+.process{grid-template-columns:1fr}
+.process>div{padding:12px 14px;gap:12px}
+.process h3{font-size:16px}
+}

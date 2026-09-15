@@ -134,3 +134,5 @@
 .map .map-popover>b{position:static;display:block;color:var(--ink);font-size:16px;line-height:1.25;margin:0 0 6px}
 
 @media(max-width:760px){.criteria-analysis-step{grid-template-columns:minmax(0,1fr);row-gap:16px}.criteria-analysis-step .step-number{line-height:1}.criteria-analysis-step>div{min-width:0}}
+
+.privacy-page .page-hero p,.privacy-content p{text-indent:1.5em}

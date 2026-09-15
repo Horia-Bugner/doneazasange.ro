@@ -168,3 +168,5 @@
 .process>div{padding:12px 14px;gap:12px}
 .process h3{font-size:16px}
 }
+
+@media(max-width:760px){.step-with-image{grid-template-columns:60px minmax(0,1fr);align-items:start}.step-with-image .step-number{margin-bottom:0}.step-with-image>div:last-child{display:contents}.step-with-image h2{grid-column:2;align-self:center;margin:0}.step-with-image p,.step-with-image .step-image{grid-column:1/-1}}

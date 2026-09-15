@@ -4,6 +4,7 @@ $assetsRoot = Join-Path $siteRoot 'assets'
 $heroRoot = Join-Path $assetsRoot 'hero-pool'
 $galleryRoot = Join-Path $assetsRoot 'gallery-pool'
 $extensions = @('.jpg', '.jpeg', '.png', '.webp', '.avif')
+$optimizedRoot = Join-Path $assetsRoot 'optimized'
 
 New-Item -ItemType Directory -Force -Path $heroRoot | Out-Null
 $periods = @('1996-2000', '2001-2004', '2005-2009', '2010-2014', '2015-2019', '2020-prezent', '2021-2024', '2025-2026')
@@ -11,10 +12,19 @@ foreach ($period in $periods) {
     New-Item -ItemType Directory -Force -Path (Join-Path $galleryRoot $period) | Out-Null
 }
 
+function Get-OptimizedPoolSrc([System.IO.FileInfo]$file, [string]$webPrefix) {
+    $optimizedName = (([System.IO.Path]::GetFileNameWithoutExtension($file.Name) -replace '[^A-Za-z0-9._-]+', '-').Trim('-')) + '.webp'
+    $optimizedPath = Join-Path $optimizedRoot $optimizedName
+    if (Test-Path -LiteralPath $optimizedPath) {
+        return "assets/optimized/$optimizedName"
+    }
+    return "$webPrefix/$($file.Name)"
+}
+
 function Get-PoolFiles([string]$folder, [string]$webPrefix) {
     @(Get-ChildItem -LiteralPath $folder -File | Where-Object { $extensions -contains $_.Extension.ToLowerInvariant() } | Sort-Object Name | ForEach-Object {
         [ordered]@{
-            src = "$webPrefix/$($_.Name)"
+            src = Get-OptimizedPoolSrc $_ $webPrefix
             alt = [System.IO.Path]::GetFileNameWithoutExtension($_.Name).Replace('-', ' ').Replace('_', ' ')
             active = $true
         }

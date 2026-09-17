@@ -175,3 +175,12 @@
 html[lang="hu"] .site-header nav{gap:.8rem;font-size:13px}html[lang="hu"] .page-hero h1{overflow-wrap:anywhere}html[lang="hu"] .quick-check .criterion b{font-size:23px}
 
 @media(min-width:761px){.directory-layout>.directory-list{max-height:none;min-height:0;align-self:stretch;contain:size;overflow-y:auto}}
+
+/* Crop only unused vertical map space; keep outlines and markers on the same scale. */
+@media(min-width:1081px){
+  .map-preview{padding-block:24px}
+  .map-preview .map-mini{width:100%;height:auto;aspect-ratio:5/4;align-self:center;--map-y-offset:8%;--map-y-scale:1.25}
+  .map-preview .country-outline{height:125%!important;top:-10%!important}
+}
+
+.map-preview .map-mini{background-color:#DCE5DF}

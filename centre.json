@@ -434,14 +434,18 @@
       "latitude": 45.03288,
       "longitude": 23.27431,
       "days": "Luni–Vineri",
-      "hours": "07:30–12:00",
+      "hours": "08:00–12:00",
       "phoneNumbers": [
         "0353414174"
       ],
       "email": null,
-      "notes": [],
-      "scheduleDate": "2026-09-07",
-      "scheduleDateLabel": "Program verificat la 7 septembrie 2026"
+      "notes": [
+        "CTS Gorj efectuează colecte mobile cu un minimum de 25-30 donatori anunțați.",
+        "Perioada minimă între 2 donări de sânge total este de 72 zile calendaristice.",
+        "Donatorii de peste 50 ani trebuie să prezinte: EKG + adeverință de la medicul de familie că nu sunt luați în evidență cu boli cronice."
+      ],
+      "scheduleDate": "2026-09-17",
+      "scheduleDateLabel": "Program verificat la 17 septembrie 2026"
     },
     {
       "id": "cts-giurgiu",
